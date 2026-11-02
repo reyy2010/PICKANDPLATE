@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#214e3d">
+  <title>Pick & Plate — What's in my fridge?</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" data-page="home" aria-label="Pick and Plate home">
+      <img src="assets/Logo.jpeg" alt="" class="brand-logo">
+      <span><strong>Pick <i>&</i> Plate</strong><small>Less waste. More taste.</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="#home" data-page="home" class="active">Home</a>
+      <a href="#about" data-page="about">About</a>
+      <a href="#ingredients" data-page="ingredients">Ingredients</a>
+      <a href="#fridge" data-page="fridge">My Fridge</a>
+      <a href="#search" data-page="search">Find Recipes</a>
+      <a href="#favorites" data-page="favorites">Favorites <span id="favoriteCount" class="nav-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page active" id="home">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">YOUR KITCHEN, REIMAGINED</span>
+          <h1>Good food starts with <em>what you have.</em></h1>
+          <p>Turn the ingredients in your fridge into something delicious. Find inspiration, save your favorites, and waste less food.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-go="fridge">Open my fridge <span>→</span></button>
+            <button class="btn btn-outline" data-go="search">Explore recipes</button>
+          </div>
+          <div class="hero-note"><span class="note-dot"></span> Simple ideas. Less waste. More flavor.</div>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="assets/Explore ingredients.jpeg" alt="Fresh ingredients ready to cook" class="hero-image">
+          <div class="floating-card"><span class="floating-icon">✦</span><div><strong>Cook smarter</strong><small>Use what you already have</small></div></div>
+        </div>
+      </div>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <div><span class="eyebrow">A LITTLE HELP IN THE KITCHEN</span><h2>Make something good today</h2></div>
+          <p>Everything you need to go from fridge to table.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <img src="assets/Find recipes.jpeg" alt="A delicious meal">
+            <div class="feature-body"><span class="feature-number">01</span><h3>Find recipes</h3><p>Discover meal ideas based on ingredients you have.</p><button class="text-link" data-go="search">Find a recipe <span>→</span></button></div>
+          </article>
+          <article class="feature-card">
+            <img src="assets/Explore ingredients.jpeg" alt="Fresh vegetables and ingredients">
+            <div class="feature-body"><span class="feature-number">02</span><h3>Explore ingredients</h3><p>Get inspired by everyday ingredients and leftovers.</p><button class="text-link" data-go="ingredients">Explore ingredients <span>→</span></button></div>
+          </article>
+          <article class="feature-card">
+            <img src="assets/Kitchen tips.jpeg" alt="Kitchen tips">
+            <div class="feature-body"><span class="feature-number">03</span><h3>Kitchen tips</h3><p>Small habits that make cooking easier and reduce waste.</p><button class="text-link" data-go="tips">See kitchen tips <span>→</span></button></div>
+          </article>
+        </div>
+      </section>
+      <section class="quote-band"><span>“</span><p>Make the most of every ingredient.</p><small>Pick & Plate kitchen philosophy</small></section>
+    </section>
+
+    <section class="page content-page" id="about">
+      <div class="page-intro"><span class="eyebrow">OUR STORY</span><h1>Cooking with what you have.</h1><p>Pick & Plate helps you decide what to cook using ingredients already at home.</p></div>
+      <div class="about-layout">
+        <img src="assets/What's in my fridge .png" alt="Pick and Plate project mind map" class="about-image">
+        <div><h2>How it works</h2><ol class="steps"><li><strong>Add your ingredients</strong><span>Enter what is currently in your fridge or pantry.</span></li><li><strong>Find your recipe</strong><span>See ideas that match the ingredients you have.</span></li><li><strong>Save what you love</strong><span>Keep favorite meal ideas close by.</span></li><li><strong>Start cooking</strong><span>Follow the recipe and enjoy your meal.</span></li></ol></div>
+      </div>
+      <h2 class="center-title">Why Pick & Plate?</h2>
+      <div class="benefit-grid"><article><span>↗</span><h3>Save money</h3><p>Make more of the food you already bought.</p></article><article><span>♻</span><h3>Reduce waste</h3><p>Give leftovers and ingredients a second life.</p></article><article><span>✦</span><h3>Find inspiration</h3><p>Get fresh ideas for everyday meals.</p></article><article><span>◷</span><h3>Save time</h3><p>Spend less time wondering what to cook.</p></article></div>
+    </section>
+
+    <section class="page content-page" id="ingredients">
+      <div class="page-intro"><span class="eyebrow">YOUR INGREDIENT GUIDE</span><h1>Start with an ingredient.</h1><p>Choose a common ingredient to add it to your fridge list and discover meal ideas.</p></div>
+      <div class="ingredient-chips" id="ingredientChips">
+        <button class="ingredient-chip" data-ingredient="Eggs">🥚 Eggs</button><button class="ingredient-chip" data-ingredient="Tomato">🍅 Tomato</button><button class="ingredient-chip" data-ingredient="Potato">🥔 Potato</button><button class="ingredient-chip" data-ingredient="Rice">🍚 Rice</button><button class="ingredient-chip" data-ingredient="Chicken">🍗 Chicken</button><button class="ingredient-chip" data-ingredient="Cheese">🧀 Cheese</button><button class="ingredient-chip" data-ingredient="Spinach">🥬 Spinach</button><button class="ingredient-chip" data-ingredient="Pasta">🍝 Pasta</button><button class="ingredient-chip" data-ingredient="Onion">🧅 Onion</button><button class="ingredient-chip" data-ingredient="Beans">🫘 Beans</button>
+      </div>
+      <div class="inline-callout"><div><h3>Have something else?</h3><p>Add any ingredient you have at home.</p></div><button class="btn btn-primary" data-go="fridge">Go to My Fridge →</button></div>
+    </section>
+
+    <section class="page content-page" id="fridge">
+      <div class="page-intro"><span class="eyebrow">YOUR PERSONAL PANTRY</span><h1>What's in your fridge?</h1><p>Add the ingredients you have and we'll suggest recipes to try.</p></div>
+      <div class="fridge-panel">
+        <form id="ingredientForm" class="add-form"><label for="ingredientInput">Add an ingredient</label><div class="input-row"><input id="ingredientInput" type="text" placeholder="e.g. eggs, tomato, rice..." autocomplete="off"><button class="btn btn-primary" type="submit">+ Add ingredient</button></div><p class="form-hint">Tip: press Enter to add each ingredient.</p></form>
+        <div class="list-heading"><h2>Your ingredients <span id="ingredientCount" class="count-pill">0</span></h2><button id="clearIngredients" class="subtle-button" type="button">Clear all</button></div>
+        <div id="ingredientList" class="ingredient-list"><div class="empty-state"><span>🥬</span><strong>Your fridge is waiting</strong><p>Add a few ingredients to get started.</p></div></div>
+        <div class="fridge-actions"><button class="btn btn-primary" id="findFromFridge" type="button">Find recipes for my ingredients <span>→</span></button><button class="btn btn-outline" id="randomFromFridge" type="button">Surprise me</button></div>
+      </div>
+      <div id="fridgeRecipeResults" class="recipe-results"></div>
+    </section>
+
+    <section class="page content-page" id="search">
+      <div class="page-intro"><span class="eyebrow">WHAT SOUNDS GOOD?</span><h1>Find your next favorite.</h1><p>Search recipes by name or ingredient, or use your fridge list for more relevant ideas.</p></div>
+      <form id="recipeSearchForm" class="search-bar"><span>⌕</span><input id="recipeSearch" type="search" placeholder="Try “omelette”, “tomato” or “pasta”"><button class="btn btn-primary" type="submit">Search</button></form>
+      <div class="search-tools"><span>Popular searches</span><button data-search="eggs">Eggs</button><button data-search="chicken">Chicken</button><button data-search="pasta">Pasta</button><button data-search="potato">Potato</button></div>
+      <div id="searchResults" class="recipe-results"></div>
+    </section>
+
+    <section class="page content-page" id="favorites">
+      <div class="page-intro"><span class="eyebrow">SAVED FOR LATER</span><h1>Your favorites.</h1><p>Recipes you save will be collected here.</p></div>
+      <div id="favoriteRecipes" class="recipe-results"></div>
+    </section>
+
+    <section class="page content-page" id="tips">
+      <div class="page-intro"><span class="eyebrow">A SMARTER KITCHEN</span><h1>Little tips, big difference.</h1><p>Make your ingredients last longer and make everyday cooking feel easier.</p></div>
+      <div class="tips-grid"><article><span>01</span><h3>Store food properly</h3><p>Keep herbs wrapped in a lightly damp towel and store leftovers in sealed containers.</p></article><article><span>02</span><h3>Use leftovers creatively</h3><p>Turn yesterday's vegetables into an omelette, soup, stir-fry or pasta sauce.</p></article><article><span>03</span><h3>Plan before shopping</h3><p>Check your fridge before buying groceries and make a short list of what you really need.</p></article><article><span>04</span><h3>Keep a visible list</h3><p>Write down ingredients that should be used soon and plan a meal around them.</p></article></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#home" data-page="home">Pick <i>&</i> Plate</a><p>Less waste. More taste.</p><small>Made to make everyday cooking a little easier.</small></footer>
+
+  <dialog id="recipeDialog" class="recipe-dialog"><button class="dialog-close" id="closeDialog" aria-label="Close recipe">×</button><div id="dialogContent"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
