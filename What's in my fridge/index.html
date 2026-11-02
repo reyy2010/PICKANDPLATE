@@ -1,0 +1,174 @@
+<html lang="en"><head>
+    <title>Pick &amp; Plate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Page">
+        <img src="Logo.jpeg" alt="P&amp;P" height="200">
+        <hi>What's in my fridge..?</hi>
+    </div>
+<hr>
+<div class="menu">
+    <a href="#" onclick="showPage('about', event)">About Us</a>
+        <a href="#" onclick="showPage('home', event)">Home</a>
+        <a href="#" onclick="showPage('services', event)">Services</a>
+        <a href="#" onclick="showPage('ingredients', event)">Ingredients</a>
+        <a href="#" onclick="showPage('favorites', event)">Favorites</a>
+        <a href="#" onclick="showPage('search', event)">Search For Recipes</a>
+        <a href="#" onclick="showPage('fridge', event)">My Fridge</a>
+        <a href="#" onclick="showPage('random', event)">Random Meal</a>
+</div>
+<hr>
+ <div id="home" style="display: block;" class="home">
+        <h2>Welcome to Pick &amp; Plate!</h2>
+        <p>Discover easy and delicious recipes using the ingredients you already have. Make cooking simpler and reduce food waste.
+         <br><span class="slogan">Less waste. More taste.</span></p>
+         <section class="pp-explore">
+    <p class="pp-subtitle">Everything you need, all in one place:</p>
+    <div class="pp-cards">
+        <div class="pp-card">
+            <img src="find recipes.jpeg" alt="Fresh salad">
+            <h3>Find Recipes</h3>
+            <p>Discover delicious meals using simple ingredients.</p>
+            <a href="#recipes" class="pp-button">Search →</a>
+        </div>
+        <div class="pp-card">
+            <img src="Explore ingredients.jpeg" alt="Fresh ingredients">
+            <h3>Explore Ingredients</h3>
+            <p>Get inspired by the ingredients you already have.</p>
+            <a href="ingredients" class="pp-button">My fridge →</a>
+        </div>
+             <div class="pp-card pp-kitchen-card">
+                <input type="checkbox" id="kitchen-toggle" class="kitchen-toggle">
+           <div class="pp-kitchen-visual">     
+            <img src="kitchen tips.jpeg" alt="Kitchen">
+           <div class="pp-kitchen-tips"> 
+            <h3>Kitchen Tips</h3>
+            <p>Store food properly.</p>
+            <p>Use leftovers creatively.</p>
+            <p>Plan your meals ahead.</p>
+        </div>
+    </div>
+             <h3>Kitchen Tips</h3>
+            <p>Learn simple ways to cook smarter and waste less.</p>
+            <label for="kitchen-toggle" class="pp-button"> Show  →</label>
+        </div>
+        <hr>
+        <p style="font-size: 43px; text-align: center;">Good food starts with what you have.
+           <br> Make the most of every ingredient.</p>
+        </div></section>
+        
+    </div>
+
+    <div id="about" style="display: none;" class="about">
+        <h2>About Us</h2>
+        <p class="p1">What's in My Fridge?</p>
+        <p class="p2">A smart and simple website that helps you decide what to cook using the ingredients you already have at home.<br>Instead of buying more food or letting ingredients go to waste, you can enter the ingredients available in your fridge,<br>and the website will suggest suitable recipes you can make with them.</p>
+        <p class="p3">How to Use..?</p>
+        <p class="num1">1. Add your ingredients:<br>-&gt;Enter the ingredients you currently have.</p>
+        <p class="num2">2. Find your recipe:<br>-&gt;Click Find Recipe to get suitable meal suggestions.</p>
+        <p class="num3">3. Choose a recipe:<br>-&gt;Explore the suggested recipes and choose what you like.</p>
+        <p class="num4">4. Start cooking..!:<br>-&gt;Follow the ingredients and steps to prepare your meal.</p>
+        <img src="What's in my fridge .png" alt="mind map" class="mind">
+        <h1 class="why-title">Why Pick&amp;Plate?</h1>
+        <h3 class="benefit-title">Save Money</h3>
+        <p class="benefit-text">Use the ingredients you already have instead of buying more food.</p>
+        <h3 class="benefit-title">Reduce Waste</h3>
+        <p class="benefit-text">Make use of leftover ingredients before they expire.</p>
+        <h3 class="benefit-title">Discover Recipes</h3>
+        <p class="benefit-text">Find creative meal ideas based on your available ingredients.</p>
+        <h3 class="benefit-title">Save Time</h3>
+        <p class="benefit-text">Spend less time deciding what to cook.</p>
+        <h4>Our goal:</h4><br>
+        <p class="goal">-&gt;To make cooking easier, save time and money, and reduce food waste.</p><br>
+        <p class="p4">Less waste.More taste</p>
+    </div>
+
+    <div id="services" style="display: none;">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Discover recipes</li>
+            <li>Manage fridge ingredients</li>
+            <li>Find meal ideas</li>
+            <li>Save favorite recipes</li>
+        </ul>
+    </div>
+
+    <div id="ingredients" style="display: none;">
+        <h2>Ingredients</h2>
+        <p>Explore ingredients and find out what you can cook with them.</p>
+    </div>
+
+    <div id="favorites" style="display: none;">
+        <h2>My Favorites</h2>
+        <p>Your favorite recipes will appear here.</p>
+    </div>
+
+    <div id="search" style="display: none;">
+        <h2>Search For Recipes</h2>
+        <input type="text" id="recipeSearch" placeholder="Enter a recipe name">
+        <button onclick="searchRecipe()">Search</button>
+        <p id="searchResult"></p>
+    </div>
+
+    <div id="fridge" style="display: none;">
+        <h2>My Fridge</h2>
+        <p>Add ingredients you have in your fridge.</p>
+
+        <input type="text" id="ingredient" placeholder="Enter an ingredient">
+        <button onclick="addIngredient()">Add</button>
+
+        <ul id="ingredientList"></ul>
+    </div>
+
+    <div id="random" style="display: none;">
+        <h2>Random Meal</h2>
+        <p>Need an idea for your next meal?</p>
+        <button onclick="randomMeal()">Surprise Me!</button>
+        <p id="mealResult"></p>
+    </div>
+
+    <script src="script.js">
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
